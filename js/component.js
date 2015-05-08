@@ -4,8 +4,13 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div>
-        <Title name="theia"></Title>
-        <Terminal></Terminal>
+        <section className="header">
+          <Title name="theia"></Title>
+          <Terminal></Terminal>
+        </section>
+        <section className="info">
+          <Links></Links>
+        </section>
       </div>
     );
   }
@@ -58,8 +63,35 @@ var TerminalScreen = React.createClass({
   render: function(){
     return (
       <div className="screen">
+      <div className="cursor">|</div>
       </div>
       )
   }
 })
+
+var Links = React.createClass({
+  render: function(){
+    return (
+      <div>
+      <Link url="npm.com/theia" name="npm"></Link>
+      <Link url="github.com/wzaghal/theia" name="github"></Link>
+      <Link url="twitter.com/_wzaghal" name="twitter"></Link>
+
+
+      </div>
+      )
+
+  }
+
+})
+
+var Link = React.createClass({
+  render: function(){
+    return (
+      <a className="link" href={this.props.url}>{this.props.name}</a>
+      )
+
+  }
+
+});
 
