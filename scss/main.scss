@@ -1,0 +1,85 @@
+@import 'scss/variables';
+@import 'scss/normalize';
+
+/* border-box*/
+*{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header{
+  background-color:#e39e54;
+  font-family: 'Open Sans', sans-serif;
+  padding-top:1px;
+  padding-bottom: 30%;
+}
+
+h1{
+  text-align:center;
+}
+
+.bar{
+  background: $grey;
+  margin: 0 auto;
+  width:35%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+}
+
+.screen{
+  margin: 0 auto;
+  width:35%;
+  background-color:$black;
+  padding-bottom:350px;
+    border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+button{
+  outline: none;
+  margin-right:3px;
+  background-color: $white;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-radius: 50%;
+  border:none;
+}
+
+.button-close{
+  background-color: $red;
+}
+.button-minimize{
+  background-color: $yellow;
+}
+
+.button-maximize{
+  background-color: $green;
+}
+
+button:nth-child(1){
+  margin-left: 5px;
+}
+
+.link{
+  padding-right:10px;
+}
+
+.cursor {
+  font-weight: 100;
+  font-size: 20px;
+  padding-left:10px;
+  -webkit-animation: 1s blink step-end infinite;
+}
+
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $dark-green;
+  }
+}
+

@@ -40,23 +40,13 @@ var TerminalBar = React.createClass({
   render: function(){
     return (
       <div className="bar">
-      <Button color="#d64d4d"></Button>
-      <Button color="#e8d174"></Button>
-      <Button color="#9ed670"></Button>
+      <button className="button-close" color="#d64d4d"></button>
+      <button className="button-minimize" color="#e8d174"></button>
+      <button className="button-maximize" color="#9ed670"></button>
 
       </div>
       )
   }
-});
-
-var Button = React.createClass({
-  render:function(){
-    let style = {'background-color':this.props.color};
-    return (
-      <button style={style}></button>
-    )
-  }
-
 });
 
 var TerminalScreen = React.createClass({
@@ -76,8 +66,6 @@ var Links = React.createClass({
       <Link url="npm.com/theia" name="npm"></Link>
       <Link url="github.com/wzaghal/theia" name="github"></Link>
       <Link url="twitter.com/_wzaghal" name="twitter"></Link>
-
-
       </div>
       )
 
