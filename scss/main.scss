@@ -1,5 +1,6 @@
 @import 'scss/variables';
 @import 'scss/normalize';
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
 
 /* border-box*/
 *{
@@ -39,12 +40,12 @@ h1{
 
 button{
   outline: none;
-  margin-right:3px;
+  margin-right: 3px;
   background-color: $white;
   margin-bottom: 10px;
   padding-bottom: 8px;
   border-radius: 50%;
-  border:none;
+  border: none;
 }
 
 .button-close{
@@ -68,18 +69,32 @@ button:nth-child(1){
 
 .cursor {
   font-weight: 100;
-  font-size: 20px;
-  padding-left:10px;
+  display: inline;
   -webkit-animation: 1s blink step-end infinite;
 }
 
+.terminal-interface {
+  color: $dark-green;
+  padding-left: 10px;
 
-@-webkit-keyframes "blink" {
+  &__text {
+    display: inline;
+    margin: 0;
+  }
+}
+
+
+.terminal-interface--last-char {
+  letter-spacing: -3px;
+}
+
+
+@include keyframes(blink) {
   from, to {
     color: transparent;
   }
   50% {
-    color: $dark-green;
+    color: inherit;
   }
 }
 
