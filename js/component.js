@@ -60,9 +60,12 @@ var TerminalScreen = React.createClass({
     return (
       <div className="screen">
         <div className="terminal-interface">
-          <p className="terminal-interface__text">{terminalMsg}</p>
-          <span className="terminal-interface--last-char">{lastChar}</span>
-          <span className="cursor">|</span>
+          <p className="terminal-interface__root">~/project git:(master)</p>
+          <p className="terminal-interface__text">
+            {terminalMsg}
+            <span className="terminal-interface--last-char">{lastChar}</span>
+            <span className="cursor">|</span>
+          </p>
         </div>
       </div>
       )

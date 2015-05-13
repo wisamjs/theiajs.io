@@ -68,18 +68,31 @@ button:nth-child(1){
 }
 
 .cursor {
-  font-weight: 100;
+  @include animation(1s blink step-end infinite);
   display: inline;
-  -webkit-animation: 1s blink step-end infinite;
+  font-weight: 100;
 }
 
 .terminal-interface {
   color: $dark-green;
-  padding-left: 10px;
+  padding-left: 5%;
+
+  p {
+    display:inline-block;
+    font-size: 12px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__root {
+    width:32%;
+    color: $red;
+  }
 
   &__text {
-    display: inline;
-    margin: 0;
+    @include animation(type 4s steps(60, end));
+    display:inline-block;
+    width: 63%;
   }
 }
 
@@ -96,5 +109,9 @@ button:nth-child(1){
   50% {
     color: inherit;
   }
+}
+
+@include keyframes(type) {
+  from { width: 0; }
 }
 
