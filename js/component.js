@@ -28,25 +28,11 @@ var Terminal = React.createClass({
   render: function(){
     return (
       <div className="terminal">
-        <TerminalBar></TerminalBar>
         <TerminalScreen></TerminalScreen>
       </div>
       )
   }
 
-});
-
-var TerminalBar = React.createClass({
-  render: function(){
-    return (
-      <div className="bar">
-      <button className="button-close" color="#d64d4d"></button>
-      <button className="button-minimize" color="#e8d174"></button>
-      <button className="button-maximize" color="#9ed670" onClick={this.test}></button>
-
-      </div>
-      )
-  }
 });
 
 var TerminalScreen = React.createClass({
@@ -58,7 +44,7 @@ var TerminalScreen = React.createClass({
     var lastChar = this.state.data.slice(-1);
     var terminalMsg = fullMsg.slice(0, fullMsg.length -1 );
     return (
-      <div className="screen">
+      <div className="terminal-screen">
         <div className="terminal-interface">
           <p className="terminal-interface__root">~/project git:(master)</p>
           <p className="terminal-interface__text">

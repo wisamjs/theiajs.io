@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.header{
+.header {
   background-color:#e39e54;
   font-family: 'Open Sans', sans-serif;
   padding-top:1px;
@@ -20,50 +20,21 @@ h1{
   text-align:center;
 }
 
-.bar{
-  background: $grey;
-  margin: 0 auto;
-  width:35%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 
-}
 
-.screen{
-  margin: 0 auto;
-  width:35%;
+.terminal-screen {
+  @include border-image(url(http://i.imgur.com/uIXttnK.png) 46 20 0 124);
   background-color:$black;
+  border-radius: 8px;
+  border-width:23px 10px 0px 62px;
+  margin: 0 auto;
   padding-bottom:350px;
-    border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  width:35%;
 }
 
-button{
-  outline: none;
-  margin-right: 3px;
-  background-color: $white;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-radius: 50%;
-  border: none;
-}
 
-.button-close{
-  background-color: $red;
-}
-.button-minimize{
-  background-color: $yellow;
-}
 
-.button-maximize{
-  background-color: $green;
-}
-
-button:nth-child(1){
-  margin-left: 5px;
-}
-
-.link{
+.link {
   padding-right:10px;
 }
 
