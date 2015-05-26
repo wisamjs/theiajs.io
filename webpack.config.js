@@ -1,7 +1,7 @@
 var bower_dir = __dirname + '/bower_components';
 
 module.exports = {
-  entry: ['webpack/hot/dev-server','./js/main.js','./scss/main.scss'],
+  entry: ['webpack/hot/dev-server','./js/app.js','./scss/app.scss'],
   resolve: {
     alias: {
       'react': bower_dir + '/react/react.min.js'

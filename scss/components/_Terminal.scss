@@ -1,0 +1,63 @@
+
+.terminal-screen {
+  @include border-image(url(http://i.imgur.com/uIXttnK.png) 46 1100 0 0);
+  border-width:23px 10px 0px 0px;
+  background-color:$black;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding-bottom:350px;
+  width:35%;
+}
+
+
+
+.terminal-interface {
+  color: $dark-green;
+
+  p {
+    display:inline-block;
+    font-size: 12px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__root {
+    width:32%;
+    color: $red;
+  }
+
+  &__text {
+    @include animation(type 4s steps(60, end));
+    display:inline-block;
+    width: 63%;
+  }
+}
+
+
+.terminal-interface--last-char {
+  letter-spacing: -3px;
+}
+.link {
+  padding-right:10px;
+}
+
+.cursor {
+  @include animation(1s blink step-end infinite);
+  display: inline;
+  font-weight: 100;
+}
+
+
+
+@include keyframes(blink) {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+@include keyframes(type) {
+  from { width: 0; }
+}

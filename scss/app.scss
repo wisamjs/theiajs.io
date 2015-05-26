@@ -1,0 +1,17 @@
+@import 'scss/variables';
+@import 'scss/normalize';
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'scss/border-box';
+
+//Components
+@import 'scss/components/Terminal';
+@import 'scss/components/Title';
+
+
+.header {
+  background-color:#e39e54;
+  font-family: 'Open Sans', sans-serif;
+  padding-top:1px;
+  padding-bottom: 30%;
+}
+
