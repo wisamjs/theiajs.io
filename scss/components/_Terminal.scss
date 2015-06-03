@@ -1,3 +1,5 @@
+@import 'scss/variables';
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
 
 .terminal-screen {
   @include border-image(url(http://i.imgur.com/uIXttnK.png) 46 1100 0 0);
@@ -27,16 +29,17 @@
   }
 
   &__text {
-    @include animation(type 4s steps(60, end));
+    @include animation(type 1s steps(60, end));
     display:inline-block;
     width: 63%;
   }
+
+  &--last-char {
+    letter-spacing: -3px;
+  }
+
 }
 
-
-.terminal-interface--last-char {
-  letter-spacing: -3px;
-}
 .link {
   padding-right:10px;
 }
@@ -59,5 +62,9 @@
 }
 
 @include keyframes(type) {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
+
+
