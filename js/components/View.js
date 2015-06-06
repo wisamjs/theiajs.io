@@ -1,8 +1,8 @@
 'use strict';
-var React = require('react');
-var Links = require('../components/Link');
-var Title = require('../components/Title');
-var Terminal = require('../components/Terminal');
+const React = require('react');
+const Links = require('../components/Link');
+const Title = require('../components/Title');
+const Terminal = require('../components/Terminal');
 
 module.exports = React.createClass({
   render: function () {

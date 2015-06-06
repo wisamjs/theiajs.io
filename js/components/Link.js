@@ -1,5 +1,5 @@
 'use strict';
-var React = require('react');
+const React = require('react');
 module.exports = React.createClass({
   render: function(){
     return (
@@ -13,7 +13,7 @@ module.exports = React.createClass({
 
 })
 
-var Link = React.createClass({
+const Link = React.createClass({
   render: function(){
     return (
       <a className="link" href={this.props.url}>{this.props.name}</a>
