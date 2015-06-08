@@ -1,4 +1,4 @@
-@import 'scss/variables';
+@import 'www/scss/variables';
 @import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
 
 .terminal-screen {
@@ -21,17 +21,36 @@
     font-size: 12px;
     margin: 0;
     overflow: hidden;
+    white-space:nowrap;
   }
 
   &__root {
     width:32%;
     color: $red;
+
+    //Duplicate of delay below
+    &--delay {
+      opacity: 0;
+      @include animation(fade 0.2s linear 1.2s 2 normal forwards);
+    }
   }
 
-  &__text {
-    @include animation(type 1s steps(60, end));
+  &__text{
     display:inline-block;
     width: 63%;
+
+    &--type{
+      @include animation(type 3s steps(40, end));
+    }
+
+    &--delay{
+      opacity: 0;
+      @include animation(fade 0.2s linear 1.2s 2 normal forwards);
+    }
+
+    &__packages{
+      padding-left: 20px;
+    }
   }
 
   &--last-char {
@@ -57,7 +76,16 @@
     color: transparent;
   }
   50% {
-    color: inherit;
+    color: $dark-green;
+  }
+}
+
+@include keyframes(fade) {
+  0%{
+    opacity:1;
+  }
+  100%{
+    opacity:1;
   }
 }
 
