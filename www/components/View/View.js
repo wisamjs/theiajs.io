@@ -7,12 +7,13 @@ const Terminal = require('../Terminal/Terminal');
 module.exports = React.createClass({
   render: function () {
     return (
-      <div>
-        <section className="header">
-          <Title name="theia"></Title>
+      <div className="wrapper">
+        <header className="header">
+          <Title name="Theia" className="header-title"/>
+          <h3 className="header-subheading">Integer posuere erat a ante.</h3>
+        </header>
+        <section className="Terminal">
           <Terminal></Terminal>
-        </section>
-        <section className="info">
           <Links></Links>
         </section>
       </div>
