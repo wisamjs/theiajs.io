@@ -5,6 +5,7 @@ const Title = require('../Title/Title');
 const Terminal = require('../Terminal/Terminal');
 
 module.exports = React.createClass({
+  displayName: 'View',
   render: function () {
     return (
       <div className="wrapper">

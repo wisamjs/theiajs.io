@@ -1,6 +1,7 @@
 'use strict';
 const React = require('react');
 module.exports = React.createClass({
+  displayName: 'Terminal',
   render: function(){
     return (
       <div className="terminal">
@@ -12,6 +13,7 @@ module.exports = React.createClass({
 });
 
 const Blink = React.createClass({
+    displayName: 'Blink',
   render: function() {
     return (
       <span className="cursor">|</span>
@@ -20,6 +22,7 @@ const Blink = React.createClass({
 });
 
 const TerminalOutput = React.createClass({
+  displayName: 'TerminalOutput',
   render: function(){
     var blink;
     var className = "terminal-interface__text" +
@@ -37,6 +40,7 @@ const TerminalOutput = React.createClass({
 });
 
 const TerminalDefault = React.createClass({
+    displayName: 'TerminalDefault',
   render: function(){
     var blink;
     if (this.props.blink){
@@ -51,7 +55,7 @@ const TerminalDefault = React.createClass({
 });
 
 const TerminalScreen = React.createClass({
-
+  displayName: 'TerminalScreen',
   getInitialState: function(){
     return {
       prompt:'theia',
