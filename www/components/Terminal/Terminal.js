@@ -23,6 +23,11 @@ const Blink = React.createClass({
 
 const TerminalOutput = React.createClass({
   displayName: 'TerminalOutput',
+  propTypes: {
+    action: React.PropTypes.string,
+    blink: React.PropTypes.boolean,
+    data: React.PropTypes.string
+  },
   render: function(){
     var blink;
     var className = "terminal-interface__text" +
@@ -41,6 +46,10 @@ const TerminalOutput = React.createClass({
 
 const TerminalDefault = React.createClass({
     displayName: 'TerminalDefault',
+    propTypes: {
+    action: React.PropTypes.string,
+    blink: React.PropTypes.boolean
+  },
   render: function(){
     var blink;
     if (this.props.blink){
@@ -58,10 +67,16 @@ const TerminalScreen = React.createClass({
   displayName: 'TerminalScreen',
   getInitialState: function(){
     return {
-      prompt:'theia',
-      output:'Found 3 missing packages',
+      prompt: 'theia',
+      output: 'Found 3 missing packages',
       missingPackages: ['gulp', 'gulp-sass', 'babel']
     };
+  },
+  displayMissingPackages: function(){
+    return this.state.missingPackages.map(function(pckg){
+      return <TerminalOutput data={"* " + pckg} action="delay"/>;
+
+    });
   },
   render: function(){
     return (
@@ -74,15 +89,9 @@ const TerminalScreen = React.createClass({
           <div className="terminal-interface__text__packages">
             {this.displayMissingPackages()}
           </div>
-          <TerminalDefault action="delay" blink="true"/>
+          <TerminalDefault action="delay" blink={true}/>
         </div>
       </div>
       );
-  },
-  displayMissingPackages: function(){
-    return this.state.missingPackages.map(function(pckg){
-      return <TerminalOutput data={"* " + pckg} action="delay"/>;
-
-    });
   }
 });

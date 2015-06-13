@@ -14,8 +14,8 @@ module.exports = React.createClass({
           <h3 className="header-subheading">Integer posuere erat a ante.</h3>
         </header>
         <section className="Terminal">
-          <Terminal></Terminal>
-          <Links></Links>
+          <Terminal/>
+          <Links/>
         </section>
       </div>
     );
