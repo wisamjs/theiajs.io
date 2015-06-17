@@ -1,22 +1,21 @@
 'use strict';
-const React = require('react');
-const Links = require('../Link/Link');
-const Title = require('../Title/Title');
-const Terminal = require('../Terminal/Terminal');
+var React = require('react');
+var Links = require('../Link/Link');
+var Terminal = require('../Terminal/Terminal');
+var Header = require('../Header/Header');
+var About = require('../About/About');
 
 module.exports = React.createClass({
   displayName: 'View',
   render: function () {
     return (
       <div className="wrapper">
-        <header className="header">
-          <Title name="Theia" className="header-title"/>
-          <h3 className="header-subheading">Integer posuere erat a ante.</h3>
-        </header>
+        <Header/>
         <section className="Terminal">
           <Terminal/>
-          <Links/>
         </section>
+        <About/>
+        <Links/>
       </div>
     );
   }

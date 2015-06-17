@@ -1,0 +1,15 @@
+@import 'www/scss/border-box';
+@import 'www/scss/variables';
+
+
+.About{
+    list-style-type: none;
+    padding: 0 7%;
+
+    li{
+      display: inline-block;
+      width: 33.33%;
+    }
+
+
+}
