@@ -1,5 +1,7 @@
 'use strict';
 const React = require('react');
+var Blink = require('../Blink/Blink');
+
 module.exports = React.createClass({
   displayName: 'Terminal',
   render: function(){
@@ -12,14 +14,7 @@ module.exports = React.createClass({
 
 });
 
-const Blink = React.createClass({
-    displayName: 'Blink',
-  render: function() {
-    return (
-      <span className="cursor">|</span>
-    );
-  }
-});
+
 
 const TerminalOutput = React.createClass({
   displayName: 'TerminalOutput',

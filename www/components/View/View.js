@@ -1,6 +1,6 @@
 'use strict';
 var React = require('react');
-var Links = require('../Link/Link');
+var Links = require('../Links/Links');
 var Terminal = require('../Terminal/Terminal');
 var Header = require('../Header/Header');
 var About = require('../About/About');
