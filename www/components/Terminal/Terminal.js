@@ -1,6 +1,7 @@
 'use strict';
 const React = require('react');
-var Blink = require('../Blink/Blink');
+var TerminalOutput = require('../TerminalOutput/TerminalOutput');
+var TerminalDefault = require('../TerminalDefault/TerminalDefault');
 
 module.exports = React.createClass({
   displayName: 'Terminal',
@@ -15,48 +16,6 @@ module.exports = React.createClass({
 });
 
 
-
-const TerminalOutput = React.createClass({
-  displayName: 'TerminalOutput',
-  propTypes: {
-    action: React.PropTypes.string,
-    blink: React.PropTypes.boolean,
-    data: React.PropTypes.string
-  },
-  render: function(){
-    var blink;
-    var className = "terminal-interface__text" +
-    " terminal-interface__text--" + this.props.action;
-    if (this.props.blink){
-      blink = <Blink/>;
-    }
-    return (
-            <p className={className}>
-              {this.props.data}
-                {blink}
-            </p>
-          );
-  }
-});
-
-const TerminalDefault = React.createClass({
-    displayName: 'TerminalDefault',
-    propTypes: {
-    action: React.PropTypes.string,
-    blink: React.PropTypes.boolean
-  },
-  render: function(){
-    var blink;
-    if (this.props.blink){
-      blink = <Blink/>;
-    }
-    var className = "terminal-interface__root" +
-    " terminal-interface__root--" + this.props.action;
-    return (
-      <p className={className}>~/project git:(master) {blink} </p>
-      );
-  }
-});
 
 const TerminalScreen = React.createClass({
   displayName: 'TerminalScreen',
